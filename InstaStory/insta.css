@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-color: rgb(0,208,255);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#card{
+    height: 480px;
+    width: 320px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 2px solid #000;
+    position: relative;
+    overflow: hidden;
+
+    
+}
+#full-screen{
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    position:absolute;
+    display: none;
+    background-position: center;
+
+}
+#storyian {
+    height: 120px;
+    width: 100%;
+    border-bottom: 2px solid #555;
+    padding: 15px;
+    white-space: nowrap;                    
+    /* sab ek line me aane ke liye means inline-block se to aagaye but conatiner khatam ho gaya to uske niche aane chahiyee esliye */
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* ye x me sab ek line me aane ke baad container ke bahar jayega so usko overcome karne ke liye hai (scroll waala chez aad ho gaya and same Y  me) */
+}
+#storyian ::-webkit-scrollbar-track{
+    display: none;
+}
+
+.story{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border: 3px solid red;
+    margin-right: 5px;
+    overflow: hidden;
+    display: inline-block;
+    /* sab ek line me aajayenge jetni container ki witdth hai; */
+
+}
+.story img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    
+}
